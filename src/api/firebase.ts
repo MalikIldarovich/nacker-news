@@ -17,7 +17,7 @@ export interface IApi {
 
 const firebaseSettings = {
     version: "/v0",
-    config: { databaseURL: process.env.BASE_URL },
+    config: { databaseURL: "https://hacker-news.firebaseio.com" },
 };
 
 const app = initializeApp(firebaseSettings.config);
