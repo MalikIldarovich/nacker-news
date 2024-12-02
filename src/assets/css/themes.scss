@@ -1,0 +1,116 @@
+@import "./variables";
+
+$themes: (
+    dark: (
+        /* Backgrounds */
+        bg-header: $d-bg-header,
+        bg-footer: $d-bg-footer,
+        bg-skeleton: $d-bg-skeleton,
+        bg-main: $d-bg-main,
+        bg-soft: $d-bg-soft,
+
+        /* Gradiends */
+        skeleton-gradient: $d-skeleton-gradient,
+        container-gradient: $d-container-gradient,
+
+        /* Colors */
+        primary: $d-primary,
+        secondary: $d-secondary,
+
+        cl-main: $d-cl-main,
+        cl-soft: $d-cl-soft,
+
+        dark: $d-dark,
+        light: $d-light,
+        error: $d-error,
+        success: $d-success,
+        warning: $d-warning,
+
+        base1000: $d-base1000,
+        base900: $d-base900,
+        base800: $d-base800,
+        base700: $d-base700,
+        base600: $d-base600,
+        base500: $d-base500,
+        base400: $d-base400,
+        base300: $d-base300,
+        base200: $d-base200,
+        base100: $d-base100,
+
+        /** Shadows **/
+        shadow-sm: $d-shadow-sm,
+        shadow-md: $d-shadow-md,
+        shadow-lg: $d-shadow-lg,
+        shadow-xl: $d-shadow-xl,
+        shadow-xxl: $d-shadow-xxl,
+    ),
+
+    light: (
+        /* Backgrounds */
+        bg-header: $l-bg-header,
+        bg-footer: $l-bg-footer,
+        bg-skeleton: $l-bg-skeleton,
+        bg-main: $l-bg-main,
+        bg-soft: $l-bg-soft,
+
+        /* Gradiends */
+        skeleton-gradient: $l-skeleton-gradient,
+        container-gradient: $l-container-gradient,
+
+        /* Colors */
+        primary: $l-primary,
+        secondary: $l-secondary,
+
+        cl-main: $l-cl-main,
+        cl-soft: $l-cl-soft,
+        dark: $l-dark,
+        light: $l-light,
+        error: $l-error,
+        success: $l-success,
+        warning: $l-warning,
+
+        /* Base colors */
+        base1000: $l-base1000,
+        base900: $l-base900,
+        base800: $l-base800,
+        base700: $l-base700,
+        base600: $l-base600,
+        base500: $l-base500,
+        base400: $l-base400,
+        base300: $l-base300,
+        base200: $l-base200,
+        base100: $l-base100,
+
+        /* Shadows */
+        shadow-sm: $l-shadow-sm,
+        shadow-md: $l-shadow-md,
+        shadow-lg: $l-shadow-lg,
+        shadow-xl: $l-shadow-xl,
+        shadow-xxl: $l-shadow-xxl,
+    )
+);
+
+
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+        div[class*="app theme-#{$theme}"] & {
+        $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                ) !global;
+            }
+
+            @content;
+            $theme-map: null !global;
+        }
+    }
+};
+
+@function themed($key) {
+    @return map-get($theme-map, $key)
+};

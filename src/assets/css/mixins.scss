@@ -1,0 +1,26 @@
+@mixin hover {
+    @media (hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin ellipsis($lineHeight, $lines: 2) {
+    overflow: hidden;
+    display: block;
+    max-height: $lineHeight * $lines;
+    text-overflow: ellipsis;
+
+    @supports (-webkit-line-clamp: 4) and (-webkit-box-orient: vertical) {
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $lines;
+    }
+}
+
+@mixin calcGridColumns($countColumn) {
+    $percent: floor(calc(100 / $countColumn) - 1) * 1%;
+    display: grid;
+    grid-template-columns: repeat($countColumn, $percent);
+    justify-content: space-between;
+}

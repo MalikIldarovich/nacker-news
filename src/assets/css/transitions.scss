@@ -1,0 +1,19 @@
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .2s;
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0;
+}
+
+.list-fade-down-enter,
+.list-fade-down-leave-to {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.list-fade-down-leave-active {
+    position: absolute;
+}

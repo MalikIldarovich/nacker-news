@@ -1,0 +1,81 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+/* Shared */
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+body {
+    width: 100wv;
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    font-size: $fz-base;
+    line-height: $lh-base;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+button:focus,
+button:focus-visible {
+    outline: none;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.container {
+    max-width: $xxl;
+    padding: 0 $space-xl;
+    margin: 0 auto;
+}
+
+@media (max-width: $xl) {
+    .container {
+        max-width: $xl;
+        padding: 0 $space-xl;
+    }
+}
+
+@media (max-width: $lg) {
+    .container {
+        max-width: $lg;
+        padding: 0 $space-lg;
+    }
+}
+
+@media (max-width: $md) {
+    .container {
+        max-width: $md;
+        padding: 0 $space-md;
+    }
+}
+
+@media (max-width: $sm) {
+    .container {
+        max-width: $sm;
+        padding: 0 $space-sm;
+    }
+}
+
+@media (max-width: $xs) {
+    .container {
+        max-width: $xs;
+        padding: 0 $space-xs;
+    }
+}

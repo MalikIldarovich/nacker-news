@@ -1,0 +1,147 @@
+
+/* Spaces */
+$space-xl: 48px;
+$space-lg: 32px;
+$space-md: 24px;
+$space-sm: 16px;
+$space-xs: 8px;
+
+/* Fonts */
+$base-font: "Montserrat", sans-serif;
+
+/* Sizes */
+$fz-h1: 48px;
+$fz-h2: 40px;
+$fz-h3: 36px;
+$fz-h4: 32px;
+$fz-h5: 28px;
+$fz-h6: 24px;
+$fz-lg: 20px;
+$fz-md: 18px;
+$fz-base: 16px;
+$fz-sm: 14px;
+$fz-xs: 12px;
+
+/* Line Heights */
+$lh-lg: 1.4;
+$lh-md: 1.3;
+$lh-sm: 1.1;
+$lh-base: 1.2;
+
+/* Colors */
+$header-h: 88px;
+
+/* Gradients */
+$main-linear-gradient: linear-gradient(
+    112.1deg,
+    #202639 11.4%,
+    #3f4c77 70.2%
+);
+
+/* Transitions */
+$default-transition: all .3s ease-in-out;
+$theme-transition:
+    color .3s ease-in-out,
+    background .3s ease-in-out,
+    background-color .3s ease-in-out,
+    border-color .3s ease-in-out,
+    opacity .3s ease-in-out,
+    box-shadow .3s ease-in-out;
+
+:root {
+    --vh: 1vh;
+    --vh-full-page: 100vh;
+}
+
+/** ================================    THEMES    ================================ **/
+/** ================================  DARK THEME  ================================ **/
+/* Backgrounds */
+$d-bg-header: #0e0712;
+$d-bg-footer: #0e0712;
+$d-bg-skeleton: #9686a980;
+
+$d-bg-main: #0e0712;
+$d-bg-soft: #201e2d;
+
+/* Colors */
+$d-primary: #5375d4;
+$d-secondary: #5086a5;
+
+$d-cl-main: #f1f1f1; 
+$d-cl-soft: #9c9c9c;
+
+$d-dark: #1c1c1c;
+$d-light: #fcfcfc;
+$d-error: #eb6666;
+$d-warning: #d4a30d;
+$d-success: #4caf50;
+
+$d-base0: #fff;
+$d-base100: #f8f8f8;
+$d-base200: #e6e6e6;
+$d-base300: #d3d3d3;
+$d-base400: #b0b0b0;
+$d-base500: #7c7c7c;
+$d-base600: #656565;
+$d-base700: #515151;
+$d-base800: #282828;
+$d-base900: #1d1d1d;
+$d-base1000: #000;
+
+/* Gradients */
+$d-banner-gradient: linear-gradient(45deg, #c3c3c31a 0%, #ffffff4d 99%);
+$d-container-gradient: linear-gradient(90deg, #000 0%, #242424 89%);
+$d-skeleton-gradient: linear-gradient( 90deg, #fff0, #a095b5, #fff0);
+
+/* Shadows */
+$d-shadow-sm: 0 1px 2px 0 rgba(white, .1);
+$d-shadow-md: 0 4px 6px -1px rgba(white, .3), 0 2px 4px -2px rgba(white, .1);
+$d-shadow-lg: 0 10px 15px -3px rgba(white, .2), 0 4px 6px -4px rgba(white, .1);
+$d-shadow-xl:	0 20px 25px -5px rgba(white, .2), 0 8px 10px -6px rgba(white, .2);
+$d-shadow-xxl: 0 25px 50px -12px rgba(white, .25);
+
+
+/** ================================ LIGHT THEME  ================================ **/
+/* Backgrounds */
+$l-bg-header: #fdfdfd;
+$l-bg-footer: #fdfdfd;
+$l-bg-skeleton: #b8a7d380;
+
+$l-bg-main: #fdfdfd;
+$l-bg-soft: #efecfb;
+
+/* Colors */
+$l-primary: #5375d4;
+$l-secondary: #910396;
+
+$l-cl-main: #161b23;
+$l-cl-soft: #6f6976;
+$l-dark: #1c1c1c;
+$l-light: #fcfcfc;
+$l-error: #eb6666;
+$l-warning: #d4a30d;
+$l-success: #4caf50;
+
+$l-base1000: #fff;
+$l-base900: #f8f8f8;
+$l-base800: #e6e6e6;
+$l-base700: #d3d3d3;
+$l-base600: #b0b0b0;
+$l-base500: #7c7c7c;
+$l-base400: #656565;
+$l-base300: #515151;
+$l-base200: #282828;
+$l-base100: #1d1d1d;
+$l-base0: #000;
+
+/* Gradients */
+$l-banner-gradient: linear-gradient(45deg, #ddf2ff1a 0%, #97adc14d 99%);
+$l-container-gradient: linear-gradient(45deg, #74838c 0%, #d9e6f1 99%);
+$l-skeleton-gradient: linear-gradient( 90deg, #fff0, #9f8dc1, #fff0);
+
+/* Shadows */
+$l-shadow-sm: 0 1px 2px 0 rgba(black, .3);
+$l-shadow-md: 0 4px 6px -1px rgba(black, .3), 0 2px 4px -2px rgba(black, .3);
+$l-shadow-lg: 0 10px 15px -3px rgba(black, .2), 0 4px 6px -4px rgba(black, .2);
+$l-shadow-xl: 0 20px 25px -5px rgba(black, .2), 0 8px 10px -6px rgba(black, .2);
+$l-shadow-xxl: 0 25px 50px -12px rgba(black, .25);
