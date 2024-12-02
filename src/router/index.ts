@@ -6,7 +6,6 @@ import {
 
 /** Components **/
 import NewsView from '@/views/NewsView.vue';
-const NewsIdView = import('@/views/NewsIdView.vue');
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,8 +17,7 @@ const router = createRouter({
         },
         {
             path: '/news/:id',
-            name: 'news_id',
-            component: NewsIdView,
+            component: () => import('@/views/NewsIdView.vue'),
         },
     ],
 });
